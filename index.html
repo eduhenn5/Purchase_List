@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <h1>Lista de Compras</h1>
+
+    <form action="/adicionar" method="post">
+        <label for="item">Adicionar Item:</label>
+        <input type="text" id="item" name="item" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <form action="/remover" method="post">
+        <label for="item">Remover Item:</label>
+        <input type="text" id="item" name="item" required>
+        <button type="submit">Remover</button>
+    </form>
+
+    <h2>Itens na Lista de Compras:</h2>
+    <ul>
+        {% for item in itens %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
