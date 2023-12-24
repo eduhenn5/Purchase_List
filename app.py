@@ -22,4 +22,8 @@ def remover_item():
     return index()
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run(debug=True)
+=======
+    app.run(debug=True)
+>>>>>>> 591104f85c6d654aca134809b3210b041ea06369
